@@ -2,7 +2,7 @@
   "name": "z80-macroasm",
   "displayName": "Z80 Macro-Assembler",
   "description": "Support for Z80 macro-assemblers in Visual Studio Code",
-  "version": "0.7.6",
+  "version": "0.7.10",
   "icon": "logo.png",
   "publisher": "mborik",
   "categories": [
@@ -26,13 +26,14 @@
     "type": "git",
     "url": "https://github.com/mborik/z80-macroasm-vscode.git"
   },
+  "pricing": "Free",
   "license": "MIT",
   "engines": {
     "vscode": "^1.52.0",
     "node": "^16.2.0"
   },
   "activationEvents": [
-    "onLanguage:z80-macroasm"
+    "onLanguage"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -82,6 +83,16 @@
           "type": "boolean",
           "default": false,
           "description": "Formatter: If you want to put a single space character after comma (instruction's argument)."
+        },
+        "z80-macroasm.format.spaceAfterInstruction": {
+          "type": "boolean",
+          "default": true,
+          "description": "Formatter: If you want to put a single space character after instruction (before colon separator)."
+        },
+        "z80-macroasm.format.spacesAroundOperators": {
+          "type": "boolean",
+          "default": false,
+          "description": "Formatter: If you want to wrap an operators with spaces."
         },
         "z80-macroasm.format.uppercaseKeywords": {
           "type": [
@@ -150,6 +161,11 @@
           "default": "no-change",
           "description": "Formatter: When formatting of hexadecimal numbers was enabled, whether it's to be additional case processing applied (by default keep untouched)."
         },
+        "z80-macroasm.suggestOnInstructions": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true, extension will suggest basic instruction mnemonics for the auto-completion. Otherwise, only instruction arguments will be suggested."
+        },
         "z80-macroasm.seekSymbolsThroughWorkspace": {
           "type": "boolean",
           "default": false,
@@ -179,7 +195,7 @@
         "name": "errmatcher-sjasmplus",
         "owner": "z80-macroasm",
         "fileLocation": [
-          "autodetect",
+          "autoDetect",
           "${workspaceFolder}"
         ],
         "pattern": [

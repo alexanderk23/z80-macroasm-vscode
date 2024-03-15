@@ -37,6 +37,10 @@ These few options allows you to configure extension's behavior but primarily you
   > default: `"auto"`
 - `z80-macroasm.format.spaceAfterArgument` - If you want to put a single space character after comma (instruction's argument).
   > default: `false`
+- `z80-macroasm.format.spaceAfterInstruction` - If you want to put a single space character after instruction (before colon separator).
+  > default: `true`
+- `z80-macroasm.format.spacesAroundOperators` - If you want to wrap an operators with spaces.
+  > default: `false`
 - `z80-macroasm.format.uppercaseKeywords` - If true, uppercase all keywords, instructions and registers. False means all lowercased and `"auto"` tries to auto-detect your code-style while typing.
   > default: `"auto"`
 - `z80-macroasm.format.bracketType` - Define which type of brackets around the instruction's arguments (pointers) you prefer: `(round)` or `[square]`.
@@ -51,6 +55,8 @@ These few options allows you to configure extension's behavior but primarily you
   >+ **"c-style"**: `0x1fff` | `0xB45D`
 - `z80-macroasm.format.hexaNumberCase` - When reformatting of hexadecimal numbers was enabled, whether it's to be additional case processing applied when `true` means uppercased, `false` lowercased.
   > default: `"no-change"`
+- `z80-macroasm.format.suggestOnInstructions` - Extension will suggest also basic instruction mnemonics for the auto-completion, not only instruction arguments.
+  > default: `false`
 - `z80-macroasm.format.splitInstructionsByColon` - Split colon separated instructions to lines.
   > default: `true`
 
@@ -108,9 +114,11 @@ These values can be used in `.vscode/tasks.json` of your project's build task.
 - [`rgbds-vscode`](https://github.com/DonaldHays/rgbds-vscode) by **Donald Hays**
 
 #### Contributors:
-- [Krusty of Benediction](https://github.com/rgiot)
+- [Romain Giot](https://github.com/rgiot)
 - [Néstor Sancho](https://github.com/theNestruo)
 - [Tomaz Kragelj](https://github.com/tomaz)
+- [Alexander Kovalenko](https://github.com/alexanderk23)
+- [Alexander Kolnogorov](https://github.com/kolnogorov)
 
 ## 📋 License
 
